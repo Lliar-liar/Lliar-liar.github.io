@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziwei Zhou | Fudan University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- Global Styles --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* --- Layout Container --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap; /* Responsive wrap */
+            gap: 40px;
+        }
+
+        /* --- Left Sidebar (Profile) --- */
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: left;
+        }
+        .profile-img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 5px; /* Slight round corner */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .name-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #000;
+        }
+        .affiliation {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin-right: 15px;
+            font-size: 18px;
+            color: #444;
+        }
+        .social-links a:hover {
+            color: #0066cc;
+        }
+
+        /* --- Right Content (Main) --- */
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 22px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- News List --- */
+        ul.news-list {
+            list-style: none;
+            padding: 0;
+        }
+        ul.news-list li {
+            margin-bottom: 10px;
+        }
+        .date {
+            font-weight: bold;
+            font-family: monospace;
+            color: #666;
+            margin-right: 10px;
+        }
+
+        /* --- Publication/Project Item --- */
+        .paper-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .paper-img {
+            flex: 0 0 200px; /* Fixed width for teaser image */
+        }
+        .paper-img img {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .paper-details {
+            flex: 1;
+        }
+        .paper-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #000;
+        }
+        .authors {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .venue {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        .tag-under-review {
+            color: #d9534f; /* Red for Under Review */
+        }
+        .paper-links a {
+            margin-right: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                max-width: 100%;
+                text-align: center;
+            }
+            .profile-img {
+                margin: 0 auto 20px auto;
+            }
+            .paper-item {
+                flex-direction: column;
+            }
+            .paper-img {
+                flex: auto;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- === Left Sidebar === -->
+        <aside class="sidebar">
+            <!-- Replace 'profile.jpg' with your photo filename -->
+            <img src="profile.jpg" alt="Ziwei Zhou" class="profile-img">
+            
+            <div class="name-header">Ziwei Zhou</div>
+            <div class="affiliation">
+                Undergraduate Student<br>
+                Fudan University<br>
+                <br>
+                Research Intern<br>
+                Microsoft Research Asia (MSRA)
+            </div>
+
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i> 22307130208@m.fudan.edu.cn<br>
+                <i class="fas fa-map-marker-alt"></i> Shanghai, China
+            </div>
+
+            <div class="social-links">
+                <!-- Replace # with your actual links -->
+                <a href="https://github.com/Lliar-liar" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fas fa-graduation-cap"></i></a> <!-- Google Scholar -->
+            </div>
+        </aside>
+
+        <!-- === Main Content === -->
+        <main class="main-content">
+            
+            <!-- Biography -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am a final-year undergraduate student at the <a href="https://cs.fudan.edu.cn/en/">School of Computer Science, Fudan University</a>, supervised by <a href="https://zxwu.azurewebsites.net/">Prof. Zuxuan Wu</a>. 
+                    Currently, I am also a Research Intern at the Shanghai System and Engineering Group, <strong>Microsoft Research Asia (MSRA)</strong>, working with <a href="#">Dr. Yifan Yang</a>.
+                </p>
+                <p>
+                    My research interests lie in <strong>Multimodal Large Language Models (MLLMs)</strong>, <strong>Audio-Visual Generation</strong>, and building <strong>Physics-Grounded World Models</strong>. 
+                    I aim to bridge the gap between multimodal reasoning and high-fidelity generation, enabling AI systems to perceive, reason about, and simulate the physical world with temporal consistency.
+                </p>
+            </section>
+
+            <!-- News -->
+            <section id="news">
+                <h2>News</h2>
+                <ul class="news-list">
+                    <li><span class="date">[Sep. 2025]</span> Submitting "Daily-Omni" to ICLR 2026!</li>
+                    <li><span class="date">[Jun. 2025]</span> Joined Microsoft Research Asia (MSRA) as a Research Intern.</li>
+                    <li><span class="date">[May. 2025]</span> Released <strong>Daily-Omni</strong> benchmark (arXiv preprint).</li>
+                </ul>
+            </section>
+
+            <!-- Research / Publications -->
+            <section id="publications">
+                <h2>Selected Research</h2>
+                
+                <!-- Project 1: Daily-Omni -->
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <!-- Replace 'daily-omni.jpg' with your teaser image -->
+                        <img src="daily-omni.jpg" alt="Daily-Omni Teaser">
+                    </div>
+                    <div class="paper-details">
+                        <a href="https://arxiv.org/abs/2505.17862" class="paper-title">Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment</a>
+                        <div class="authors">
+                            <strong>Ziwei Zhou</strong>, [Co-author Name], [Co-author Name], Zuxuan Wu
+                        </div>
+                        <div class="venue">
+                            <span class="tag-under-review">Under Review at ICLR 2026</span>
+                        </div>
+                        <p>
+                            We introduce <strong>Daily-Omni</strong>, the first efficiently scalable benchmark for audio-visual question answering. 
+                            Proposed a novel QA generation pipeline utilizing Gemini 2.0 and DeepSeek-R1. 
+                            Developed a training-free agent with "Smart Alignment" that achieves SoTA performance among open-source models.
+                        </p>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2505.17862">[arXiv]</a>
+                            <a href="#">[Code]</a>
+                            <a href="#">[Project Page]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: MSRA Work (Optional Placeholder) -->
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <!-- Placeholder image or remove image div if no visual yet -->
+                        <img src="https://via.placeholder.com/200x120?text=World+Model" alt="World Model">
+                    </div>
+                    <div class="paper-details">
+                        <span class="paper-title">Unified Autoregressive Model for Synchronized Audio-Visual Generation</span>
+                        <div class="authors">
+                            <strong>Ziwei Zhou</strong>, Yifan Yang
+                        </div>
+                        <div class="venue">
+                            Work in Progress (MSRA)
+                        </div>
+                        <p>
+                            Architecting a unified model extending Qwen2.5-Omni with discrete audio-video tokens (VQ-VAE). 
+                            Focusing on high-fidelity video synthesis with precisely aligned audio, targeting performance comparable to Google’s Veo3.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Education -->
+            <section id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <strong>Fudan University</strong>, Shanghai, China <span style="float:right">Sep. 2022 – Present</span><br>
+                        B.S. in Computer Science and Technology<br>
+                        GPA: 3.62/4.00 (Core courses: A in Pattern Recognition, Computer Vision)
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
