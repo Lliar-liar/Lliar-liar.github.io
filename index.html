@@ -67,7 +67,7 @@
         }
         .social-links a {
             margin-right: 15px;
-            font-size: 18px;
+            font-size: 20px; /* Slightly larger icons */
             color: #444;
         }
         .social-links a:hover {
@@ -93,6 +93,14 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        
+        h3 {
+            font-size: 18px;
+            color: #444;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
 
         /* --- News List --- */
         ul.news-list {
@@ -109,7 +117,7 @@
             margin-right: 10px;
         }
 
-        /* --- Publication/Project Item --- */
+        /* --- Publication Item (With Image) --- */
         .paper-item {
             display: flex;
             gap: 20px;
@@ -126,6 +134,19 @@
         .paper-details {
             flex: 1;
         }
+        
+        /* --- Project Item (Text Only) --- */
+        .project-item-text {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid #eee; /* Light visual separator */
+        }
+        .project-item-text:hover {
+            border-left-color: #0066cc; /* Highlight on hover */
+            transition: 0.3s;
+        }
+
+        /* --- Typography for Titles/Authors --- */
         .paper-title {
             font-size: 18px;
             font-weight: bold;
@@ -142,9 +163,18 @@
             font-weight: bold;
             color: #000;
             margin-bottom: 10px;
+            font-size: 14px;
         }
         .tag-under-review {
-            color: #d9534f; /* Red for Under Review */
+            color: #d9534f; /* Red */
+        }
+        .tag-wip {
+            color: #f0ad4e; /* Orange for Work in Progress */
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            vertical-align: middle;
         }
         .paper-links a {
             margin-right: 10px;
@@ -198,11 +228,10 @@
             </div>
 
             <div class="social-links">
-                <!-- Replace # with your actual links -->
-                <a href="https://github.com/Lliar-liar" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fas fa-graduation-cap"></i></a> <!-- Google Scholar -->
+                <!-- Only Github kept as requested -->
+                <a href="https://github.com/Lliar-liar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <!-- Add your Google Scholar later if available -->
+                <a href="https://scholar.google.com/citations?user=VascmRkAAAAJ&hl=zh-TW" target="_blank"><i class="fas fa-graduation-cap"></i></a>
             </div>
         </aside>
 
@@ -214,7 +243,7 @@
                 <h2>About Me</h2>
                 <p>
                     I am a final-year undergraduate student at the <a href="https://cs.fudan.edu.cn/en/">School of Computer Science, Fudan University</a>, supervised by <a href="https://zxwu.azurewebsites.net/">Prof. Zuxuan Wu</a>. 
-                    Currently, I am also a Research Intern at the Shanghai System and Engineering Group, <strong>Microsoft Research Asia (MSRA)</strong>, working with <a href="#">Yifan Yang</a>.
+                    Currently, I am also a Research Intern at the Shanghai System and Engineering Group, <strong>Microsoft Research Asia (MSRA)</strong>, working with <a href="#">Dr. Yifan Yang</a>.
                 </p>
                 <p>
                     My research interests lie in <strong>Multimodal Large Language Models (MLLMs)</strong>, <strong>Audio-Visual Generation</strong>, and building <strong>Physics-Grounded World Models</strong>. 
@@ -234,12 +263,13 @@
 
             <!-- Research / Publications -->
             <section id="publications">
-                <h2>Selected Research</h2>
+                <h2>Research</h2>
                 
-                <!-- Project 1: Daily-Omni -->
+                <!-- 1. Selected Publications (With Image) -->
+                <h3>Selected Publications</h3>
                 <div class="paper-item">
                     <div class="paper-img">
-                        <!-- Replace 'daily-omni.jpg' with your teaser image -->
+                        <!-- Replace 'visual_ablation_case.jpg' with your actual file name -->
                         <img src="visual_ablation_case.jpg" alt="Daily-Omni Teaser">
                     </div>
                     <div class="paper-details">
@@ -263,25 +293,33 @@
                     </div>
                 </div>
 
-                <!-- Project 2: MSRA Work (Optional Placeholder) -->
-                <div class="paper-item">
-                    <div class="paper-img">
-                        <!-- Placeholder image or remove image div if no visual yet -->
-                        <img src="https://via.placeholder.com/200x120?text=World+Model" alt="World Model">
+                <!-- 2. Ongoing Projects (Text Only) -->
+                <h3>Ongoing Research</h3>
+                
+                <!-- AR Video Gen -->
+                <div class="project-item-text">
+                    <span class="paper-title">Unified Autoregressive Model for Synchronized Audio-Visual Generation</span>
+                    <div class="authors">
+                        <strong>Ziwei Zhou</strong>, Yifan Yang <span class="tag-wip">Work in Progress</span>
                     </div>
-                    <div class="paper-details">
-                        <span class="paper-title">Unified Autoregressive Model for Synchronized Audio-Visual Generation</span>
-                        <div class="authors">
-                            <strong>Ziwei Zhou</strong>, Yifan Yang
-                        </div>
-                        <div class="venue">
-                            Work in Progress (MSRA)
-                        </div>
-                        <p>
-                            Architecting a unified model extending Qwen2.5-Omni with discrete audio-video tokens (VQ-VAE). 
-                            Focusing on high-fidelity video synthesis with precisely aligned audio, targeting performance comparable to Google’s Veo3.
-                        </p>
+                    <p>
+                        Architecting a unified autoregressive model extending Qwen2.5-Omni with discrete audio and video tokens (via VQ-VAEs). 
+                        Focusing on synthesizing high-fidelity video with precisely aligned audio, targeting performance comparable to proprietary systems like Google’s Veo3.
+                        The model aims to leverage pre-trained reasoning priors to improve generative physical consistency.
+                    </p>
+                </div>
+
+                <!-- Benchmark -->
+                <div class="project-item-text">
+                    <span class="paper-title">Benchmarking Framework for Audio-Video Generation</span>
+                    <div class="authors">
+                        <strong>Ziwei Zhou</strong>, Yifan Yang <span class="tag-wip">Work in Progress</span>
                     </div>
+                    <p>
+                        Developing a systematic evaluation benchmark to quantify the quality of generated audio-visual content.
+                        Unlike existing metrics that focus on single-modality fidelity, this framework specifically targets <strong>cross-modal synchronization</strong>, <strong>semantic alignment</strong>, and <strong>physical plausibility</strong>.
+                        This project addresses a critical gap in standardized evaluation for World Models.
+                    </p>
                 </div>
 
             </section>
@@ -293,6 +331,7 @@
                     <li>
                         <strong>Fudan University</strong>, Shanghai, China <span style="float:right">Sep. 2022 – Present</span><br>
                         B.S. in Computer Science and Technology<br>
+                   
                     </li>
                 </ul>
             </section>
