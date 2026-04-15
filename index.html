@@ -83,7 +83,10 @@
             <section id="news">
                 <h2>News</h2>
                 <ul class="news-list">
-
+                    <li><span class="date">[Apr. 2026]</span> Released <strong>AVGen-Bench</strong> benchmark (arXiv
+                        preprint).</li>
+                    <li><span class="date">[Mar. 2026]</span> Released <strong>BizGenEval</strong> benchmark (arXiv
+                        preprint).</li>
                     <li><span class="date">[Jun. 2025]</span> Joined Microsoft Research Asia (MSRA) as a Research
                         Intern.</li>
                     <li><span class="date">[May. 2025]</span> Released <strong>Daily-Omni</strong> benchmark (arXiv
@@ -105,14 +108,20 @@
                         <a href="https://arxiv.org/abs/2505.17862" class="paper-title">Daily-Omni: Towards Audio-Visual
                             Reasoning with Temporal Alignment</a>
                         <div class="authors">
-                            <strong>Ziwei Zhou</strong>, Rui Wang, Zuxuan Wu
+                            <strong>Ziwei Zhou</strong>, Rui Wang, Zuxuan Wu, Yu-Gang Jiang
                         </div>
                         <p>
-                            We introduce <strong>Daily-Omni</strong>, the first efficiently scalable benchmark for
-                            audio-visual question answering.
-                            Proposed a novel QA generation pipeline utilizing Gemini 2.0 and DeepSeek-R1.
-                            Developed a training-free agent with "Smart Alignment" that achieves SoTA performance among
-                            open-source models.
+                            <strong>Daily-Omni</strong> is a multiple-choice audio-visual QA benchmark with 684
+                            real-world videos and 1,197 questions across 6 task families that explicitly require
+                            cross-modal temporal reasoning.
+                            We build it with a semi-automatic pipeline covering annotation, cross-modal consistency
+                            refinement, temporal alignment elicitation, and text-only leakage filtering, followed by
+                            human verification.
+                            The benchmark includes diagnostic evaluation over 24 foundation models under 37
+                            model-modality settings, together with a training-free modular baseline built from
+                            off-the-shelf unimodal models.
+                            Results show that many end-to-end MLLMs still struggle on alignment-critical questions,
+                            highlighting robust cross-modal temporal alignment as an open challenge.
                         </p>
                         <div class="paper-links">
                             <a href="https://arxiv.org/abs/2505.17862">[arXiv]</a>
@@ -130,7 +139,9 @@
                         <a href="https://github.com/microsoft/BizGenEval" class="paper-title">BizGenEval: A Systematic
                             Benchmark for Commercial Visual Content Generation</a>
                         <div class="authors">
-                            Open-source benchmark for structured commercial image generation evaluation
+                            Yan Li, Zezi Zeng, <strong>Ziwei Zhou</strong>, Xin Gao, Muzhao Tian, Yifan Yang, Mingxi
+                            Cheng, Qi Dai, Yuqing Yang, Lili Qiu, Zhendong Wang, Zhengyuan Yang, Xue Yang, Lijuan Wang,
+                            Ji Li, Chong Luo
                         </div>
                         <div class="venue">
                             <span>arXiv preprint, 2026</span>
@@ -157,7 +168,8 @@
                         <a href="https://github.com/microsoft/AVGen-Bench" class="paper-title">AVGen-Bench: A
                             Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation</a>
                         <div class="authors">
-                            Open-source benchmark for joint audio-video generation evaluation
+                            <strong>Ziwei Zhou</strong>, Zeyuan Lai, Rui Wang, Yifan Yang, Zhen Xing, Yuqing Yang, Qi
+                            Dai, Lili Qiu, Chong Luo
                         </div>
                         <div class="venue">
                             <span>arXiv preprint, 2026</span>
