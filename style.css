@@ -232,6 +232,9 @@ ul.news-list li::before {
 
 .paper-img img {
     width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
@@ -380,6 +383,10 @@ ul.news-list li::before {
         flex: auto;
         max-width: 100%;
         margin-bottom: 16px;
+    }
+
+    .paper-img img {
+        height: auto;
     }
     
     .paper-links a {
