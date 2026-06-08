@@ -282,6 +282,13 @@ ul.news-list li::before {
     margin-bottom: 8px;
 }
 
+.author-note {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: -4px;
+    margin-bottom: 8px;
+}
+
 .venue {
     font-weight: 600;
     color: var(--text-dark);

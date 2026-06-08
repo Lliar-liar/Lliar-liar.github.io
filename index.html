@@ -16,9 +16,6 @@
     <meta property="og:url" content="https://lliar-liar.github.io/">
     <meta property="og:type" content="website">
 
-    <!-- Favicon -->
-    <link rel="icon" href="profile.jpg" type="image/jpeg">
-
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -83,6 +80,10 @@
             <section id="news">
                 <h2>News</h2>
                 <ul class="news-list">
+                    <li><span class="date">[May. 2026]</span> Released <strong>SkillOpt</strong>, which quickly
+                        attracted <strong>5K+ GitHub stars</strong> and broad community attention.</li>
+                    <li><span class="date">[May. 2026]</span> <strong>AVGen-Bench</strong> was accepted to
+                        <strong>ICML 2026</strong>.</li>
                     <li><span class="date">[Apr. 2026]</span> Released <strong>AVGen-Bench</strong> benchmark (arXiv
                         preprint).</li>
                     <li><span class="date">[Mar. 2026]</span> Released <strong>BizGenEval</strong> benchmark (arXiv
@@ -139,10 +140,11 @@
                         <a href="https://github.com/microsoft/BizGenEval" class="paper-title">BizGenEval: A Systematic
                             Benchmark for Commercial Visual Content Generation</a>
                         <div class="authors">
-                            Yan Li, Zezi Zeng, <strong>Ziwei Zhou</strong>, Xin Gao, Muzhao Tian, Yifan Yang, Mingxi
-                            Cheng, Qi Dai, Yuqing Yang, Lili Qiu, Zhendong Wang, Zhengyuan Yang, Xue Yang, Lijuan Wang,
-                            Ji Li, Chong Luo
+                            Yan Li<sup>*</sup>, Zezi Zeng<sup>*</sup>, <strong>Ziwei Zhou<sup>*</sup></strong>, Xin
+                            Gao<sup>*</sup>, Muzhao Tian<sup>*</sup>, Yifan Yang, Mingxi Cheng, Qi Dai, Yuqing Yang,
+                            Lili Qiu, Zhendong Wang, Zhengyuan Yang, Xue Yang, Lijuan Wang, Ji Li, Chong Luo
                         </div>
+                        <div class="author-note"><sup>*</sup> Equal contribution.</div>
                         <div class="venue">
                             <span>arXiv preprint, 2026</span>
                         </div>
@@ -168,11 +170,12 @@
                         <a href="https://github.com/microsoft/AVGen-Bench" class="paper-title">AVGen-Bench: A
                             Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation</a>
                         <div class="authors">
-                            <strong>Ziwei Zhou</strong>, Zeyuan Lai, Rui Wang, Yifan Yang, Zhen Xing, Yuqing Yang, Qi
-                            Dai, Lili Qiu, Chong Luo
+                            <strong>Ziwei Zhou<sup>*</sup></strong>, Zeyuan Lai<sup>*</sup>, Rui Wang, Yifan Yang, Zhen
+                            Xing, Yuqing Yang, Qi Dai, Lili Qiu, Chong Luo
                         </div>
+                        <div class="author-note"><sup>*</sup> Equal contribution.</div>
                         <div class="venue">
-                            <span>arXiv preprint, 2026</span>
+                            <span>ICML 2026</span>
                         </div>
                         <p>
                             AVGen-Bench is a task-driven benchmark for evaluating text-to-audio-video generation with
@@ -185,6 +188,37 @@
                             <a href="https://arxiv.org/abs/2604.08540">[arXiv]</a>
                             <a href="https://github.com/microsoft/AVGen-Bench">[Code]</a>
                             <a href="https://aka.ms/avgenbench">[Project Page]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="assets/skillopt-teaser.png" alt="SkillOpt Teaser">
+                    </div>
+                    <div class="paper-details">
+                        <a href="https://github.com/microsoft/SkillOpt" class="paper-title">SkillOpt: Executive Strategy
+                            for Self-Evolving Agent Skills</a>
+                        <div class="authors">
+                            Yifan Yang<sup>*</sup>, Ziyang Gong<sup>*</sup>, Weiquan Huang<sup>*</sup>, Qihao
+                            Yang<sup>*</sup>, <strong>Ziwei Zhou<sup>*</sup></strong>, Zisu Huang<sup>*</sup>, Yan Li,
+                            Xuemei Gao, Qi Dai, Bei Liu, Kai Qiu, Yuqing Yang, Dongdong Chen, Xue Yang, Chong Luo
+                        </div>
+                        <div class="author-note"><sup>*</sup> Equal contribution.</div>
+                        <div class="venue">
+                            <span>arXiv preprint, 2026</span>
+                        </div>
+                        <p>
+                            SkillOpt treats a compact natural-language skill document as the trainable state of a frozen
+                            agent, optimizing it through scored rollouts, bounded textual edits, and held-out validation
+                            gates.
+                            The learned skills are reusable deployment artifacts that improve agent performance without
+                            changing model weights or adding inference-time model calls.
+                        </p>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2605.23904">[arXiv]</a>
+                            <a href="https://github.com/microsoft/SkillOpt">[Code]</a>
+                            <a href="https://microsoft.github.io/SkillOpt/">[Project Page]</a>
                         </div>
                     </div>
                 </div>
