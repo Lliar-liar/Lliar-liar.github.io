@@ -8,10 +8,10 @@
 
     <!-- SEO & Social Sharing -->
     <meta name="description"
-        content="Personal homepage of Ziwei Zhou, an undergraduate at Fudan University and Research Intern at MSRA, working on Multimodal LLMs and Audio-Visual Generation.">
+        content="Personal homepage of Ziwei Zhou, a Fudan Computer Science graduate and Research Intern at MSRA, working on multimodal AI and self-improving agents. Co-first author of SkillOpt (NeurIPS 2026 Spotlight).">
     <meta property="og:title" content="Ziwei Zhou | Fudan University">
     <meta property="og:description"
-        content="Researcher in Multimodal Large Language Models and Audio-Visual Generation.">
+        content="Multimodal AI and self-improving agents. Co-first author of SkillOpt (NeurIPS 2026 Spotlight). Seeking Fall 2027 PhD opportunities.">
     <meta property="og:image" content="profile.jpg">
     <meta property="og:url" content="https://lliar-liar.github.io/">
     <meta property="og:type" content="website">
@@ -32,7 +32,7 @@
 
             <div class="name-header">Ziwei Zhou</div>
             <div class="affiliation">
-                Undergraduate Student<br>
+                B.S. in Computer Science (2026)<br>
                 Fudan University<br>
                 <br>
                 Research Intern<br>
@@ -60,19 +60,26 @@
             <section id="about">
                 <h2>About Me</h2>
                 <p>
-                    I am a final-year undergraduate student at the <a href="https://cs.fudan.edu.cn/en/">School of
-                        Computer Science, Fudan University</a>, supervised by <a
+                    I received my B.S. in Computer Science from <a href="https://cs.fudan.edu.cn/en/">Fudan
+                        University</a> in June 2026, where I worked with <a
                         href="https://zxwu.azurewebsites.net/">Prof. Zuxuan Wu</a>.
-                    Currently, I am also a Research Intern at the Shanghai System and Engineering Group,
+                    Currently, I am a Research Intern at the Shanghai System and Engineering Group,
                     <strong>Microsoft Research Asia (MSRA)</strong>, working with Senior Research SDE <a
                         href="https://www.microsoft.com/en-us/research/people/yifanyang/">Yifan Yang</a>.
                 </p>
                 <p>
-                    My research interests lie in <strong>Multimodal Large Language Models (MLLMs)</strong>,
+                    My research interests lie in <strong>Self-Improving Agents</strong>,
+                    <strong>Multimodal Large Language Models (MLLMs)</strong>,
                     <strong>Audio-Visual Generation</strong>, and building <strong>Physics-Grounded World
                         Models</strong>.
                     I aim to bridge the gap between multimodal reasoning and high-fidelity generation, enabling AI
                     systems to perceive, reason about, and simulate the physical world with temporal consistency.
+                </p>
+                <p>
+                    I am a co-first author of <a href="#skillopt">SkillOpt</a>
+                    (<strong>NeurIPS 2026 Spotlight</strong>) and am seeking
+                    <strong>Fall 2027 PhD opportunities</strong>.
+                    <a href="ZiweiZhouCV.pdf">CV (PDF)</a>.
                 </p>
             </section>
 
@@ -80,6 +87,8 @@
             <section id="news">
                 <h2>News</h2>
                 <ul class="news-list">
+                    <li><span class="date">[Sep. 2026]</span> <strong>SkillOpt</strong> was accepted as a
+                        <strong>Spotlight at NeurIPS 2026</strong>!</li>
                     <li><span class="date">[Jul. 2026]</span> <strong>SkillOpt</strong> reached
                         <strong>14.8K+ GitHub stars</strong>.</li>
                     <li><span class="date">[May. 2026]</span> Released <strong>SkillOpt</strong>, which quickly
@@ -103,6 +112,38 @@
 
                 <!-- 1. Selected Publications (With Image) -->
                 <h3>Selected Publications</h3>
+                <div class="paper-item" id="skillopt">
+                    <div class="paper-img">
+                        <img src="assets/skillopt-teaser.png" alt="SkillOpt Teaser">
+                    </div>
+                    <div class="paper-details">
+                        <a href="https://github.com/microsoft/SkillOpt" class="paper-title">SkillOpt: Executive Strategy
+                            for Self-Evolving Agent Skills</a>
+                        <div class="authors">
+                            Yifan Yang<sup>*</sup>, Ziyang Gong<sup>*</sup>, Weiquan Huang<sup>*</sup>, Qihao
+                            Yang<sup>*</sup>, <strong>Ziwei Zhou<sup>*</sup></strong>, Zisu Huang<sup>*</sup>, Yan Li,
+                            Xuemei Gao, Qi Dai, Bei Liu, Kai Qiu, Yuqing Yang, Dongdong Chen, Xue Yang, Chong Luo
+                        </div>
+                        <div class="author-note"><sup>*</sup> Equal contribution.</div>
+                        <div class="venue">
+                            <span>NeurIPS 2026</span>
+                            <span class="tag-spotlight">Spotlight</span>
+                        </div>
+                        <p>
+                            SkillOpt treats a compact natural-language skill document as the trainable state of a frozen
+                            agent, optimizing it through scored rollouts, bounded textual edits, and held-out validation
+                            gates.
+                            The learned skills are reusable deployment artifacts that improve agent performance without
+                            changing model weights or adding inference-time model calls.
+                        </p>
+                        <div class="paper-links">
+                            <a href="https://arxiv.org/abs/2605.23904">[arXiv]</a>
+                            <a href="https://github.com/microsoft/SkillOpt">[Code]</a>
+                            <a href="https://microsoft.github.io/SkillOpt/">[Project Page]</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="paper-item">
                     <div class="paper-img">
                         <img src="assets/daily-omni.jpg" alt="Daily-Omni Teaser">
@@ -194,37 +235,6 @@
                     </div>
                 </div>
 
-                <div class="paper-item">
-                    <div class="paper-img">
-                        <img src="assets/skillopt-teaser.png" alt="SkillOpt Teaser">
-                    </div>
-                    <div class="paper-details">
-                        <a href="https://github.com/microsoft/SkillOpt" class="paper-title">SkillOpt: Executive Strategy
-                            for Self-Evolving Agent Skills</a>
-                        <div class="authors">
-                            Yifan Yang<sup>*</sup>, Ziyang Gong<sup>*</sup>, Weiquan Huang<sup>*</sup>, Qihao
-                            Yang<sup>*</sup>, <strong>Ziwei Zhou<sup>*</sup></strong>, Zisu Huang<sup>*</sup>, Yan Li,
-                            Xuemei Gao, Qi Dai, Bei Liu, Kai Qiu, Yuqing Yang, Dongdong Chen, Xue Yang, Chong Luo
-                        </div>
-                        <div class="author-note"><sup>*</sup> Equal contribution.</div>
-                        <div class="venue">
-                            <span>arXiv preprint, 2026</span>
-                        </div>
-                        <p>
-                            SkillOpt treats a compact natural-language skill document as the trainable state of a frozen
-                            agent, optimizing it through scored rollouts, bounded textual edits, and held-out validation
-                            gates.
-                            The learned skills are reusable deployment artifacts that improve agent performance without
-                            changing model weights or adding inference-time model calls.
-                        </p>
-                        <div class="paper-links">
-                            <a href="https://arxiv.org/abs/2605.23904">[arXiv]</a>
-                            <a href="https://github.com/microsoft/SkillOpt">[Code]</a>
-                            <a href="https://microsoft.github.io/SkillOpt/">[Project Page]</a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- 2. Ongoing Projects (Text Only) -->
                 <h3>Ongoing Research</h3>
 
@@ -255,7 +265,7 @@
                 <ul>
                     <li>
                         <strong>Fudan University</strong>, Shanghai, China <span style="float:right">Sep. 2022 –
-                            Present</span><br>
+                            Jun. 2026</span><br>
                         B.S. in Computer Science and Technology<br>
 
                     </li>

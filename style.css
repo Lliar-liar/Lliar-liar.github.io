@@ -308,6 +308,7 @@ ul.news-list li::before {
     font-weight: 600;
 }
 
+.tag-spotlight,
 .tag-wip {
     color: #92400e;
     background-color: #fef3c7;
